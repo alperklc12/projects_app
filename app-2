@@ -10,19 +10,22 @@ the_number = random.randint(0, 100)
 guess = 101
 right_of_choice = 0
 
+name = input("What is your name? ")
+
 while guess != the_number:
     if right_of_choice < 5:
         right_of_choice += 1
         print("Guess %d:" % right_of_choice)
         guess_text = input("Guess a number between 0 and 100: ")
         guess = int(guess_text)
-        
+
         if guess < the_number:
-            print("too low")
+            # print("Your guess of " + str(guess) + " was too LOW!")
+            print("Sorry {}, your guess of {} was too LOW!".format(name, guess))
         elif guess > the_number:
-            print("too high")
+            print("Sorry {}, your guess of {} was too HIGH!".format(name, guess))
         else:
-            print("Congratulations...")
+            print("Congratulations {}, you won...".format(name))
     else:
         print("Your choices are over!")
         print("Random number is %d" % the_number)
