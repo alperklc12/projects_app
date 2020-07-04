@@ -1,0 +1,10 @@
+SEPARATE_LINES = "-" * 25
+
+print(SEPARATE_LINES)
+print("HELLO APP".center(25))
+print(SEPARATE_LINES + "\n")
+
+user_name = input("What is your name? ")
+greeting = "Nice to meet you, " + user_name
+
+print(greeting)
