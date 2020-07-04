@@ -1,0 +1,20 @@
+class UtilitiesCls:
+    SEPARATE_LINES = "-"
+    PIECE_NUMBER = None
+
+    @classmethod
+    def enter_piece_number_fn(cls, number):
+        cls.PIECE_NUMBER = number
+
+
+    @classmethod
+    def game_title_fn(cls, game_name, number):
+        cls.enter_piece_number_fn(number)
+
+        print(cls.SEPARATE_LINES * cls.PIECE_NUMBER)
+        print(game_name.center(number))
+        print(cls.SEPARATE_LINES * cls.PIECE_NUMBER + "\n")
+
+
+def define_title_fn(name, number):
+    UtilitiesCls.game_title_fn(name, number)
