@@ -23,11 +23,11 @@ while guess != the_number:
             # print("Your guess of " + str(guess) + " was too LOW!")
             print("Sorry {}, your guess of {} was too LOW!".format(name, guess))
         elif guess > the_number:
-            print("Sorry {}, your guess of {} was too HIGH!".format(name, guess))
+            print("Sorry %s your guess of %d was too HIGH!" % (name, guess))
         else:
             print("Congratulations {}, you won...".format(name))
     else:
-        print("Your choices are over!")
+        print("\nYour choices are over!")
         print("Random number is %d" % the_number)
         guess = the_number
 
